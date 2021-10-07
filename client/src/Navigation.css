@@ -1,0 +1,133 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  background-color: #05f;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #cdcdcd;
+  border-radius: 3px;
+  margin-right: 1rem;
+}
+
+.navbar-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: inherit;
+}
+
+.logo {
+  font-weight: bolder;
+  margin: 1rem auto;
+}
+
+.logo a {
+  text-decoration: none;
+  margin: auto 4rem;
+  color: white;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.navbar-items ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-items ul li {
+  list-style: none;
+}
+
+.navbar-items ul li a {
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.register {
+  position: relative;
+  margin: auto 4rem;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.btn {
+  width: 100px;
+  margin: auto 0.5rem;
+  font-size: large;
+  font-weight: bolder;
+  background-color: #05f;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.btn.primary {
+  background-color: white;
+  color: #05f;
+  padding: 0.4rem;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .navbar {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    margin: 1rem;
+    right: 1%;
+  }
+
+  .navbar.collapse {
+    height: 300px;
+    transition: ease-in-out;
+  }
+
+  .navbar-items {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-items.show {
+    display: block;
+  }
+
+  .navbar-items ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .register {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+  }
+}
